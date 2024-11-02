@@ -63,8 +63,9 @@ variable "subnet_delegation" {
   description = "A map of subnet name to delegation block on the subnet"
 }
 
+# accepted values: Disabled, Enabled, NetworkSecurityGroupEnabled and RouteTableEnabled
 variable "subnet_private_endpoint_network_policies" {
-  type        = map(bool)
+  type        = map(string)
   default     = {}
   description = "A map of subnet name to enable/disable private link endpoint network policies on the subnet."
 }
